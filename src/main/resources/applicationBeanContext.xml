@@ -2,8 +2,23 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="
-        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <!-- bean definitions here -->
+    <!-- Greeting Bean -->
+    <bean id="myBean"
+          class="org.example.GreetingServices"/>
+
+    <!-- Email Notification Bean -->
+    <bean id="emailNotificationService"
+          class="org.example.LooseCoupling.EmailNotification"/>
+
+    <!-- UserService Bean (Constructor Injection) -->
+    <bean id="userService"
+          class="org.example.LooseCoupling.UserService">
+
+        <constructor-arg ref="emailNotificationService"/>
+
+    </bean>
 
 </beans>
