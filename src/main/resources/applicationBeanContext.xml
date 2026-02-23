@@ -6,8 +6,8 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- Greeting Bean -->
-    <bean id="myBean"
-          class="org.example.GreetingServices"/>
+<!--    <bean id="myBean"-->
+<!--          class="org.example.Demo.GreetingServices"/>-->
 
     <!-- Email Notification Bean -->
     <bean id="emailNotificationService"
